@@ -11,7 +11,7 @@ void    ft_putchar(char c);
 void    ft_putstr(char *str);
 
 int     ft_strlen(char *str);
-int     ft_atoi(char *str);
+int     ft_atoi(const char *str);
 
 int     ft_isalnum(char *str);
 int     ft_isalpha(char *str);
