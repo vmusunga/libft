@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 15:56:45 by vmusunga          #+#    #+#             */
-/*   Updated: 2020/10/14 16:01:00 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/08 15:02:28 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isascii(char *str)
-{
-    int i;
+#include "libft.h"
 
-    i = 0;
-    while (str[i])
-    {
-        if (str[i] < 0 && str[i] > 177)
-            return (0);
-        i++;
-    }
-    return (1);
+int     ft_isascii(int c)
+{
+    if (c < 0 && c > 177)
+        return (0);
+    else
+        return (1);
 }

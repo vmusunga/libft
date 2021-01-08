@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:47:44 by vmusunga          #+#    #+#             */
-/*   Updated: 2020/10/12 11:52:23 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/08 15:22:39 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
-{
-	int i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] < 32 || str[i] == 127)
-			return (0);
-		i++;
-	}
-	return (1);
+int		ft_isprint(int c)
+{
+	if (c < 32 || c == 127)
+		return (0);
+	else
+		return (1);
 }

@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/14 15:56:45 by vmusunga          #+#    #+#             */
-/*   Updated: 2020/10/14 16:01:00 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/01/08 15:47:19 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/01/08 16:01:54 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int     ft_strlen(char *str)
+size_t  ft_strlen(const char *str)
 {
     int i;
     i = 0;
@@ -20,7 +21,7 @@ int     ft_strlen(char *str)
     return (i);
 }
 
-int    ft_strlcat(char *src, char *dst, int size)
+size_t  ft_strlcat(char *src, const char *dst, size_t size)
 {
     int i;
     int x;
@@ -40,4 +41,9 @@ int    ft_strlcat(char *src, char *dst, int size)
     }
     dst[x + i] = '\0';
     return (x + y);
+}
+
+int main()
+{
+    
 }
