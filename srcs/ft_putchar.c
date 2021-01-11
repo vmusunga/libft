@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/08 15:23:38 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/08 15:29:05 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/01/11 15:10:52 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/01/11 15:11:49 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void    ft_putchar(int c)
 {

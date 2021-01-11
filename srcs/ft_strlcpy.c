@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 15:56:45 by vmusunga          #+#    #+#             */
-/*   Updated: 2020/10/14 16:01:00 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/11 17:37:26 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../includes/libft.h"
 
-void    ft_strlcpy(char *src, char *dst, int size)
+#include "libft.h"
+
+void    ft_strlcpy(char *restrict src, const char *restrict dst, size_t size)
 {
-    int i;
+    size_t i;
 
     i = 0;
     while (i < size - 1 && src[i])

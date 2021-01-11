@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/14 15:56:45 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/11 17:37:56 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/01/11 14:20:59 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/01/11 14:24:25 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t       ft_strlen(const char *str)
+int     ft_tolower(int c)
 {
-    int x;
-
-    x = 0;
-    while (str[x])
-        x++;
-    return (x);
+    if (c >= 'A' && c <= 'Z')
+        c +=32;
+    return(c);
 }
+
+int main() 
+{ 
+	char ch; 
+
+	// letter to convert to lowercase
+	ch = 'A'; 
+
+	printf("%c -------> %c\n", ch, ft_tolower(ch)); 
+	return 0; 
+} 

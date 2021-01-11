@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/14 15:56:45 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/11 17:37:56 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/01/11 14:11:11 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/01/11 14:24:53 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t       ft_strlen(const char *str)
+int     ft_toupper(int c)
 {
-    int x;
-
-    x = 0;
-    while (str[x])
-        x++;
-    return (x);
+    if (c >= 'a' && c <= 'z')
+        c -=32;
+    return(c);
 }
+
+int main() 
+{ 
+	char ch; 
+
+	// letter to convert to uppercase
+	ch = 'a'; 
+
+	printf("%c --------> %c\n", ch, ft_toupper(ch));
+	return 0; 
+} 

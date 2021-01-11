@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 15:47:19 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/08 16:01:54 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/11 17:37:32 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t  ft_strlen(const char *str)
     return (i);
 }
 
-size_t  ft_strlcat(char *src, const char *dst, size_t size)
+size_t  ft_strlcat(char *restrict src, const char *restrict dst, size_t size)
 {
     int i;
     int x;

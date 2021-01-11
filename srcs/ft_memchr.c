@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/14 15:56:45 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/11 10:46:29 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/01/11 12:24:28 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/01/11 12:40:16 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_strncmp(const char *s1, const char *s2, size_t len)
+void    *ft_memchr(const void *s, int c, size_t n)
 {
-    size_t i;
-    
+    int i;
+
     i = 0;
-    if (len == 0)
-        return (0);
-    while (i < len - 1 && s1[i] && s2[i])
+    while (i < n)
     {
-        if (s1[i] != s2[i])
-            return (s1[i] - s2[i]);
-    i++;
+        if (((unsigned char*)s)[i] != ((unsigned char)c))
+            i++;
+        else 
+            return (&((void*)s)[i]);
     }
-    return (s1[i] - s2[i]);
+    return (0);
 }
 
-int main()
+int main () 
 {
-    char *x;
-    char *y;
-    x = "aAaa";
-    y = " A";
-    printf("%d\n", ft_strncmp(x,y,3));
-    printf("%d\n", strncmp(x,y,3));
-    return (0);
+   const char str[] = "http://www.tutorialspoint.com";
+   const char ch = '.';
+   char *ret;
+
+   ret = ft_memchr(str, ch, strlen(str));
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
+
+   return(0);
 }
