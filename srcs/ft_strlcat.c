@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:37:44 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 12:08:41 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 19:04:47 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ size_t	ft_strlen(const char *str)
 
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 {
-	int i;
-	int x;
-	int y;
+	size_t i;
+	size_t x;
+	size_t y;
 
 	x = ft_strlen(dst);
 	y = ft_strlen(src);

@@ -6,21 +6,13 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 16:56:29 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/11 17:37:33 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 19:03:26 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strlen(char *str)
-{
-	int x;
-
-	x = 0;
-	while (str[x])
-		x++;
-	return x;
-}
+size_t		ft_strlen(const char *str);
 
 char	*ft_strjoin(char *s1, char *s2)
 {

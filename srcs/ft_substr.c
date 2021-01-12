@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 14:48:33 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 15:21:07 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 19:08:25 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char *new;
-	int i;
-	int x;
+	size_t i;
+	size_t x;
 
 	x = 0;
 	i = 0;
