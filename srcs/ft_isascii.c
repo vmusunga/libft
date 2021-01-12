@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmusunga <vmusunga@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 15:56:45 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/08 15:02:28 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 11:22:35 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_isascii(int c)
+int		ft_isascii(int c)
 {
-    if (c < 0 && c > 177)
-        return (0);
-    else
-        return (1);
+	if (c < 0 && c > 177)
+		return (0);
+	else
+		return (1);
 }

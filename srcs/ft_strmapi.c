@@ -1,45 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/12 11:34:21 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 11:35:11 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/01/12 16:22:57 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/01/12 16:46:05 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int i;
+	size_t i;
+	size_t len;
+	char *new;
 
+	len = 0;
 	i = 0;
-	if (c == '\0')
+	while (s[len])
+		len++;
+	if(!(new = malloc(sizeof(char) * len)))
+		return (0);
+	while (i < len)
 	{
-		while (s[i])
-			i++;
-		return (&((char *)s)[i]);
-	}
-	while (s[i] != ((char)c) && s[i])
+		new[i] = (*f)(i, s[i]);
 		i++;
-	if (s[i] == ((char)c))
-		return (&((char *)s)[i]);
-	return (0);
+	}
+	new[i] = '\0';
+	return (new);
 }
 
-int main () 
+/*
+char	ft_test(int x, char c)
 {
-   const char str[] = "http://www.tutorialspoint.com\0ugyb";
-   const char ch = '\0';
-   char *ret;
-
-
-   ret = strchr(str, ch);
-
-   printf("String after |%c| is - |%s|\n", ch, ret);
-   
-   return(0);
+	c += 32;
+	return (c);
 }
+
+int main ()
+{
+	char *ptr = "abcd";
+	ft_strmapi(ptr, ft_test());
+	return (0);
+}*/

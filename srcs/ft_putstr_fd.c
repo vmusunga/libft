@@ -1,45 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/12 11:34:21 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 11:35:11 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/01/12 15:36:45 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/01/12 15:39:58 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int i;
-
 	i = 0;
-	if (c == '\0')
+
+	while (s[i])
 	{
-		while (s[i])
-			i++;
-		return (&((char *)s)[i]);
-	}
-	while (s[i] != ((char)c) && s[i])
+		write(fd, &s[i], 1);
 		i++;
-	if (s[i] == ((char)c))
-		return (&((char *)s)[i]);
-	return (0);
+	}
 }
 
-int main () 
+int		main()
 {
-   const char str[] = "http://www.tutorialspoint.com\0ugyb";
-   const char ch = '\0';
-   char *ret;
-
-
-   ret = strchr(str, ch);
-
-   printf("String after |%c| is - |%s|\n", ch, ret);
-   
-   return(0);
+	char *ptr = "Hello";
+	ft_putstr_fd(ptr, 1);
+	return (0);
 }

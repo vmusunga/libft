@@ -1,45 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/12 11:34:21 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 11:35:11 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/01/12 15:44:35 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/01/12 16:16:45 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	int i;
-
-	i = 0;
-	if (c == '\0')
-	{
-		while (s[i])
-			i++;
-		return (&((char *)s)[i]);
-	}
-	while (s[i] != ((char)c) && s[i])
-		i++;
-	if (s[i] == ((char)c))
-		return (&((char *)s)[i]);
-	return (0);
+	write(fd, &c, 1);
 }
 
-int main () 
+void	ft_putnbr_fd(int n, int fd)
 {
-   const char str[] = "http://www.tutorialspoint.com\0ugyb";
-   const char ch = '\0';
-   char *ret;
+	unsigned int nb;
 
+	nb = n;
+	if (n < 0)
+	{
+		nb = -n;
+		ft_putchar_fd('-', fd);
+	}
+	if (9 < nb)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putchar_fd(nb % 10 + '0', fd);
+	}
+	else
+		ft_putchar_fd(nb + '0', fd);
+}
 
-   ret = strchr(str, ch);
-
-   printf("String after |%c| is - |%s|\n", ch, ret);
-   
-   return(0);
+int main ()
+{
+	ft_putnbr_fd(2147483647, 1);
+	return (0);
 }
