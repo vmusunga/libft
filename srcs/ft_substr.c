@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 14:48:33 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 19:08:25 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 19:38:35 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		new[x++] = s[start++];
 	new[x] = '\0';
 	return (new);
-}
-
-int main()
-{
-	char *ptr = "123456789";
-	printf("%s", ft_substr(ptr, 3, 6));
-	return (0);
 }

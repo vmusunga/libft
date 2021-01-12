@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 15:44:35 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 16:16:45 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 19:34:16 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,4 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else
 		ft_putchar_fd(nb + '0', fd);
-}
-
-int main ()
-{
-	ft_putnbr_fd(2147483647, 1);
-	return (0);
 }

@@ -6,16 +6,20 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:38:51 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 12:23:55 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 20:14:03 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strlcpy(char *restrict dst, const char *restrict src, size_t size)
+size_t	ft_strlen(const char *src);
+
+size_t	ft_strlcpy(char *restrict dst, const char *src, size_t size)
 {
 	size_t i;
+	size_t srclen;
 
+	srclen = ft_strlen(src);
 	i = 0;
 	while ((i < size - 1) && src[i])
 	{
@@ -23,29 +27,5 @@ void	ft_strlcpy(char *restrict dst, const char *restrict src, size_t size)
 		i++;
 	}
 	dst[i] = '\0';
-}
-
-void	ft_putstr(char *str)
-{
-	int i;
-	i = 0;
-
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-
-}
-
-int main()
-{
-	char *src = "abc";
-	char dst[10];
-	int size = 4;
-
-	ft_strlcpy(dst, src, size);
-	ft_putstr(dst);
-	write(1, "\n", 1);
-	return (0);
+	return (srclen);
 }

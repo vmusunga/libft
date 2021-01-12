@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:21:50 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 11:22:04 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 19:29:43 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,4 @@ int		ft_isalpha(int c)
 		return (1);
 	else
 		return (0);
-}
-
-int main()
-{
-	char c;
-	c = 'Q';
-	printf("\nResult when uppercase alphabet is passed: %d", ft_isalpha(c));
-
-	c = 'q';
-	printf("\nResult when lowercase alphabet is passed: %d", ft_isalpha(c));
-
-	c='+';
-	printf("\nResult when non-alphabetic character is passed: %d", ft_isalpha(c));
-
-	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:25:11 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 19:00:49 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 19:31:18 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,4 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (&((void*)s)[i]);
 	}
 	return (0);
-}
-
-int main () 
-{
-   const char str[] = "http://www.tutorialspoint.com";
-   const char ch = '.';
-   char *ret;
-
-   ret = ft_memchr(str, ch, strlen(str));
-
-   printf("String after |%c| is - |%s|\n", ch, ret);
-
-   return(0);
 }

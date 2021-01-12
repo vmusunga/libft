@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:19:12 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 11:19:17 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 19:28:05 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,4 @@ void	ft_bzero(void *s, size_t n)
 		((unsigned char*)s)[i] = '\0';
 		i++;
 	}
-}
-
-int main () {
-   char str[50];
-
-   strcpy(str,"This is string.h library function");
-   puts(str);
-
-   ft_bzero(str,7);
-   puts(str);
-   
-   return(0);
 }

@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:35:33 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 11:36:54 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 19:35:25 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,4 @@ char	*ft_strdup(const char *s1)
 	}
 	cpy[i] = '\0';
 	return (cpy);
-}
-
-int main()
-{
-	const char *ptr = "brrt";
-	printf("%s\n",ft_strdup(ptr));
-	return (0);
 }

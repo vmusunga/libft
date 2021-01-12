@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 16:22:57 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 16:46:05 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 19:37:08 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new[i] = '\0';
 	return (new);
 }
-
-/*
-char	ft_test(int x, char c)
-{
-	c += 32;
-	return (c);
-}
-
-int main ()
-{
-	char *ptr = "abcd";
-	ft_strmapi(ptr, ft_test());
-	return (0);
-}*/

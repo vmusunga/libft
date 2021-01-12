@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 15:36:45 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 15:39:58 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 19:34:15 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,4 @@ void	ft_putstr_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-}
-
-int		main()
-{
-	char *ptr = "Hello";
-	ft_putstr_fd(ptr, 1);
-	return (0);
 }

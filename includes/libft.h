@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:20:30 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 17:44:22 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 20:07:11 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 
 //void	ft_putstr(char *str);
-void	ft_strlcpy(char *restrict dst, const char *restrict src, size_t size);
-
+size_t	ft_strlcpy(char *restrict dst, const char *src, size_t size);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size);
 
@@ -60,6 +59,7 @@ char	*ft_strdup(const char *s1);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strrchr(const char *s, int c);
 
 typedef struct	s_list
 {

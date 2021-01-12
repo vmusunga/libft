@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 14:46:26 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 14:47:39 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 19:34:40 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,24 +89,4 @@ void	ft_putstr(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
-}
-
-int main()
-{
-	char **test;
-	char *str = "abc-defgh-ijkl-m";
-	char sep = '-';
-	int x;
-	int i;
-
-	i = 0;
-	x = 0;
-	test = ft_split(str, sep);
-	while (test[x])
-	{
-		ft_putstr(test[x]);
-		write(1, "\n", 1);
-		x++;
-	}
-	return(0);
 }

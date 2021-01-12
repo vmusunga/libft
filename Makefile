@@ -6,7 +6,7 @@
 #    By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/12 17:51:18 by vmusunga          #+#    #+#              #
-#    Updated: 2021/01/12 19:08:00 by vmusunga         ###   ########.fr        #
+#    Updated: 2021/01/12 19:24:59 by vmusunga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRCS	=	srcs/ft_atoi.c \
 			srcs/ft_strncmp.c \
 			srcs/ft_strnstr.c \
 			srcs/ft_strrchr.c \
+			srcs/ft_strtrim.c \
 			srcs/ft_substr.c \
 			srcs/ft_tolower.c \
 			srcs/ft_toupper.c

@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:37:44 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 19:04:47 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/12 19:35:57 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,25 +41,4 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 	}
 	dst[x + i] = '\0';
 	return (x + y);
-}
-
-int main()
-{
-    char first[] = "This is ";
-    char last[] = "a potentially long string";
-    int r;
-    int size = 16;
-    char buffer[size];
-
-    strcpy(buffer,first);
-    r = ft_strlcat(buffer,last,size);
-
-    puts(buffer);
-    printf("Value returned: %d\n",r);
-    if( r > size )
-        puts("String truncated");
-    else
-        puts("String was fully copied");
-
-    return(0);
 }
