@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 14:24:00 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/11 15:29:17 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 12:28:18 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,11 @@ int     ft_atoi(const char *str)
 		i++;
 	}
 	return (x * sign);
+}
+
+int		main()
+{
+	char *x = "-54";
+	printf("%d", ft_atoi(x));
+	return (0);
 }

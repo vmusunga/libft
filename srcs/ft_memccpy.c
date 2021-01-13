@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 19:41:39 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 19:43:03 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 11:18:46 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		else
 		{
 			((unsigned char*)dst)[i] = ((unsigned char*)src)[i];
-			return (&dst[i]);
+			return (&dst[i + 1]);
 		}
 	}
 	return (0);

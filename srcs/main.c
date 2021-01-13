@@ -6,13 +6,13 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 19:26:39 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 20:20:24 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 12:32:34 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 //ft_atoi.c 
-mabite
+
 //ft_bzero.c 
 int main () 
 {

@@ -38,28 +38,36 @@ char	*ft_revstr(char *str)
 char	*ft_itoa(int n)
 {
 	int i;
-	int neg;
 	unsigned int nb;
 	char *str;
 
-	neg = 0;
 	nb = n;
 	i = 0;
 	if (n == 0)
 		return ("0");
 	if (n < 0)
-		neg = 1;
+		nb = -n;
 	if (!(str = malloc(sizeof(char) * (ft_intcount(n) + 2))))
 		return (0);
 	while (i < ft_intcount(n))
 	{
-		str[i] = (nb % 10) + 48;
+		str[i] = (nb % 10) + '0';
 		nb = nb / 10;
 		i++;
 	}
-	if (neg == 1)
+	if (n < 0)
 		str[i++] = '-';
 	str[i] = '\0';
 	ft_revstr(str);
 	return (str);
 }
+/*
+int main(int ac, char **av)
+{
+	int x;
+	//x = atoi(av[1]);
+	x = -10;
+
+	printf("%s", ft_itoa(x));
+	return (0);
+}*/
