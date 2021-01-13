@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 16:21:00 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 14:46:56 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 17:13:17 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	i = 0;
 	if(!(x = malloc(size * count)))
-		return (0);
+		return (NULL);
 	while (i < count * size)
 	{
 		x[i] = 0;

@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 16:56:29 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 14:46:56 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 17:14:50 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	if (!(dest = malloc(sizeof(char) * (len1 + len2 + 2))))
-		return(0);
+		return(NULL);
 	while (s1[i])
 	{
 		dest[i] = s1[i];

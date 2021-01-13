@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:20:30 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 12:20:51 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 17:42:41 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+#define NULL ((void*)0)
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);

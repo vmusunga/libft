@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 15:40:10 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 14:46:56 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 17:38:35 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,11 @@ char	*ft_strrchr(const char *s, int c)
 		len++;
 	if (c == '\0')
 		return (&((char *)s)[len]);
-	i = len - 1;
-	while (s[i] != ((char)c) && s[i])
-		i--;
-	if (s[i] == ((char)c))
-		return (&((char *)s)[i]);
+	while (len > 0)
+	{
+		if (s[len - 1] == ((char)c))
+			return (&((char *)s)[len - 1]);
+		len--;
+	}
 	return (0);
 }

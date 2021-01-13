@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:42:20 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 17:06:55 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 17:14:06 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char		*ft_itoa(int n)
 	if (n < 0)
 		nb = -n;
 	if (!(str = malloc(sizeof(char) * (ft_intcount(n) + 2))))
-		return (0);
+		return (NULL);
 	while (i < ft_intcount(n))
 	{
 		str[i] = (nb % 10) + '0';
