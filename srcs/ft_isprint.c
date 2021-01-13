@@ -6,15 +6,15 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 17:47:44 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 11:23:53 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 15:06:09 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int		ft_isprint(int c)
 {
-	if (c < 32 || c == 127)
+	if (c < 32 || c >= 127)
 		return (0);
 	else
 		return (1);

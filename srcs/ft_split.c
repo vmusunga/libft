@@ -6,13 +6,13 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 14:46:26 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 19:34:40 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 17:05:14 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
-int		ft_countw(char const *str, char c)
+static int	ft_countw(char const *str, char c)
 {
 	int i;
 	int count;
@@ -31,7 +31,7 @@ int		ft_countw(char const *str, char c)
 	return(count);
 }
 
-int		ft_len(char const *str, char c)
+static int	ft_len(char const *str, char c)
 {
 	int x;
 	int i;
@@ -48,7 +48,7 @@ int		ft_len(char const *str, char c)
 	return(x);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char **dest;
 	int i;
@@ -77,16 +77,4 @@ char	**ft_split(char const *s, char c)
 	}
 	dest[x] = 0;
 	return (dest);
-}
-
-void	ft_putstr(char *str)
-{
-	int i;
-	i = 0;
-
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
 }

@@ -1,6 +1,18 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/13 14:42:20 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/01/13 17:06:55 by vmusunga         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int		ft_intcount(int n)
+#include "../includes/libft.h"
+
+static int	ft_intcount(int n)
 {
 	int i;
 
@@ -13,7 +25,7 @@ int		ft_intcount(int n)
 	return (i);
 }
 
-char	*ft_revstr(char *str)
+static char	*ft_revstr(char *str)
 {
 	char buff;
 	int i;
@@ -35,7 +47,7 @@ char	*ft_revstr(char *str)
 	return (str);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int i;
 	unsigned int nb;

@@ -5,19 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/14 15:56:45 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 11:40:04 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/01/13 17:05:51 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/01/13 17:05:56 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
-size_t       ft_strlen(const char *str)
+size_t		ft_strlen(const char *str)
 {
-    int x;
+	int x;
 
-    x = 0;
-    while (str[x])
-        x++;
-    return (x);
+	x = 0;
+	while (str[x])
+		x++;
+	return (x);
 }

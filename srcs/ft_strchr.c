@@ -6,11 +6,11 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:34:21 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 19:35:03 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 14:46:56 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

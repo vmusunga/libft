@@ -6,11 +6,11 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:43:35 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 19:39:02 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 14:46:56 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int		ft_tolower(int c)
 {

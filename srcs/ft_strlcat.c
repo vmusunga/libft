@@ -6,20 +6,11 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:37:44 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 19:35:57 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 15:00:28 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	int i;
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include "../includes/libft.h"
 
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 {

@@ -6,10 +6,10 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 15:23:20 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 14:36:28 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 14:46:56 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set);

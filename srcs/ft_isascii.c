@@ -6,16 +6,16 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/14 15:56:45 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/12 11:22:35 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 15:33:10 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int		ft_isascii(int c)
 {
-	if (c < 0 && c > 177)
-		return (0);
-	else
+	if (c >= 0 && c <= 127)
 		return (1);
+	else
+		return (0);
 }

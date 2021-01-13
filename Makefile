@@ -6,7 +6,7 @@
 #    By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/12 17:51:18 by vmusunga          #+#    #+#              #
-#    Updated: 2021/01/12 19:24:59 by vmusunga         ###   ########.fr        #
+#    Updated: 2021/01/13 15:00:28 by vmusunga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ SRCS	=	srcs/ft_atoi.c \
 			srcs/ft_tolower.c \
 			srcs/ft_toupper.c
 
-		# srcs/ft_lstadd_back.c \
+BONUS	=	srcs/ft_lstadd_back.c \
 			srcs/ft_lstadd_front.c \
 			srcs/ft_lstclear.c \
 			srcs/ft_lstdelone.c \
@@ -57,6 +57,7 @@ SRCS	=	srcs/ft_atoi.c \
 
 INCS	= includes
 OBJS	= ${SRCS:.c=.o}
+OBJS_BONUS = ${BONUS:.c=.o}
 NAME	= libft.a
 CC		= gcc
 LIBC	= ar rc
@@ -72,6 +73,10 @@ ${NAME}:	${OBJS}
 			${LIBR} ${NAME}
 
 all:		${NAME}
+
+bonus:		${OBJS_BONUS}
+			${LIBC} ${NAME} ${OBJS_BONUS}
+			${LIBR} ${NAME}
 
 clean:
 			${RM} ${OBJS}

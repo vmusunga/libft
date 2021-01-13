@@ -6,11 +6,11 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 19:41:39 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 11:18:46 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/13 14:46:56 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
