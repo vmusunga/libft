@@ -6,13 +6,11 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:38:51 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 16:13:43 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/14 11:35:10 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
-
-size_t	ft_strlen(const char *src);
 
 size_t	ft_strlcpy(char *restrict dst, const char *src, size_t size)
 {

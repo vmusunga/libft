@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 14:46:26 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 17:14:27 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/14 12:25:24 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,20 @@ static int	ft_len(char const *str, char c)
 	return(x);
 }
 
+static void	**ft_free(char **tab)
+{
+	int x;
+
+	x = 0;
+	while (tab[x] != '\0')
+	{
+		free(tab[x]);
+		x++;
+	}
+	free(tab);
+	return (0);
+}
+
 char		**ft_split(char const *s, char c)
 {
 	char **dest;
@@ -57,6 +71,8 @@ char		**ft_split(char const *s, char c)
 
 	i = 0;
 	x = 0;
+	if ((!s))
+		return(NULL);
 	if (!(dest = malloc(sizeof(char**) * (ft_countw(s, c) + 1))))
 		return (NULL);
 	while (x < ft_countw(s, c))
@@ -77,4 +93,5 @@ char		**ft_split(char const *s, char c)
 	}
 	dest[x] = 0;
 	return (dest);
+	ft_free(dest);
 }

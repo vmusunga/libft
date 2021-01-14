@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 15:36:45 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 14:46:56 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/14 12:33:39 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	int i;
 	i = 0;
 
+	if ((!s))
+		return;
 	while (s[i])
 	{
 		write(fd, &s[i], 1);
