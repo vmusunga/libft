@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:42:20 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/14 12:48:09 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/14 15:28:38 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ static char	*ft_revstr(char *str)
 	len = 0;
 	i = 0;
 	while (str[len++])
-		x = len - 1;
+		{
+			x = len - 1;
+		}
 	while (i < x)
 	{
 		buff = str[i];
@@ -80,8 +82,10 @@ int main(int ac, char **av)
 {
 	int x;
 	//x = atoi(av[1]);
-	x = 0;
+	x = '\0';
 
 	printf("%s", ft_itoa(x));
+	//printf("%s", itoa(x));
+
 	return (0);
 }*/
