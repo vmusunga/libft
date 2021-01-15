@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 19:26:39 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/15 10:42:41 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/15 16:30:45 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -372,7 +372,14 @@ int main ()
    return(0);
 }
 
-//ft_strtrim.c 
+//ft_strtrim.c
+int main ()
+{
+	char *x = "  \t \t \n   \n\n\n\t";
+	char *y = " \n\t";
+	printf("%s\n", ft_strtrim(x, y));
+	return (0);
+}
 
 //ft_substr.c
 int main()
