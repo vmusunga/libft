@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 14:24:00 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/14 15:05:14 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/15 10:51:32 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ static int	ft_overflow(unsigned long long x, int sign)
 
 int			ft_atoi(const char *str)
 {
-	int i;
-	int sign;
-	unsigned long long x;
+	int					i;
+	int					sign;
+	unsigned long long	x;
 
 	sign = 1;
 	i = 0;
@@ -53,12 +53,4 @@ int			ft_atoi(const char *str)
 	if (ft_overflow(x, sign) != 2)
 		return (ft_overflow(x, sign));
 	return (x * sign);
-}
-
-int main()
-{
-	char *x = "-9223372036854775809";
-	printf("%d\n", ft_atoi(x));
-	printf("%d",atoi(x));
-	return (0);
 }

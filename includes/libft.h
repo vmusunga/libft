@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:20:30 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 17:42:41 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/15 13:14:21 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,13 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define NULL ((void*)0)
+//#define NULL ((void*)0)
+
+typedef struct	s_list
+{
+void			*content;
+struct s_list	*next;
+}				t_list;
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
@@ -63,10 +69,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 
-typedef struct	s_list
-{
-void			*content;
-struct s_list	*next;
-}				t_list;
+void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **alst, t_list *new);
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstnew(void *content);
+int	ft_lstsize(t_list *lst);
 
 #endif

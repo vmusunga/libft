@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/01/12 17:51:18 by vmusunga          #+#    #+#              #
-#    Updated: 2021/01/13 15:00:28 by vmusunga         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 SRCS	=	srcs/ft_atoi.c \
 			srcs/ft_bzero.c \
 			srcs/ft_calloc.c \
@@ -19,6 +7,15 @@ SRCS	=	srcs/ft_atoi.c \
 			srcs/ft_isdigit.c \
 			srcs/ft_isprint.c \
 			srcs/ft_itoa.c \
+			srcs/ft_lstadd_back.c \
+			srcs/ft_lstadd_front.c \
+			srcs/ft_lstclear.c \
+			srcs/ft_lstdelone.c \
+			srcs/ft_lstiter.c \
+			srcs/ft_lstlast.c \
+			srcs/ft_lstmap.c \
+			srcs/ft_lstnew.c \
+			srcs/ft_lstsize.c \
 			srcs/ft_memccpy.c \
 			srcs/ft_memchr.c \
 			srcs/ft_memcmp.c \
@@ -47,7 +44,7 @@ SRCS	=	srcs/ft_atoi.c \
 
 BONUS	=	srcs/ft_lstadd_back.c \
 			srcs/ft_lstadd_front.c \
-			srcs/ft_lstclear.c \
+			#srcs/ft_lstclear.c \#
 			srcs/ft_lstdelone.c \
 			srcs/ft_lstiter.c \
 			srcs/ft_lstlast.c \
@@ -59,29 +56,22 @@ INCS	= includes
 OBJS	= ${SRCS:.c=.o}
 OBJS_BONUS = ${BONUS:.c=.o}
 NAME	= libft.a
-CC		= gcc
+CC	  = gcc
 LIBC	= ar rc
 LIBR	= ranlib
-CFLAGS	= -Wall -Werror -Wextra
-RM		= rm -f
-
+CFLAGS  = -Wall -Werror -Wextra
+RM	  = rm -f
 .c.o:
-			${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I${INCS}
-
-${NAME}:	${OBJS}
-			${LIBC} ${NAME} ${OBJS}
-			${LIBR} ${NAME}
-
-all:		${NAME}
-
-bonus:		${OBJS_BONUS}
-			${LIBC} ${NAME} ${OBJS_BONUS}
-			${LIBR} ${NAME}
-
+		 ${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I${INCS}
+${NAME}:   ${OBJS}
+		 ${LIBC} ${NAME} ${OBJS}
+		 ${LIBR} ${NAME}
+all:	  ${NAME}
+bonus:	${OBJS} ${BONUS}
+		 ${LIBC} ${NAME} ${OBJS}
+		 ${LIBR} ${NAME}
 clean:
-			${RM} ${OBJS}
-
-fclean:		clean
-			${RM} ${NAME}
-
-re:			fclean all
+		 ${RM} ${OBJS}
+fclean:	   clean
+		 ${RM} ${NAME}
+re:		  fclean all

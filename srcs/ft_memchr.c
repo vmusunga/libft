@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:25:11 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 14:46:56 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/15 10:40:49 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (((unsigned char*)s)[i] != ((unsigned char)c))
 			i++;
-		else 
+		else
 			return (&((void*)s)[i]);
 	}
 	return (0);

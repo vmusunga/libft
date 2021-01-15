@@ -6,12 +6,19 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 19:26:39 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 12:32:34 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/15 10:42:41 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-//ft_atoi.c 
+//ft_atoi.c
+int main()
+{
+	char *x = "-9223372036854775809";
+	printf("%d\n", ft_atoi(x));
+	printf("%d",atoi(x));
+	return (0);
+}
 
 //ft_bzero.c 
 int main () 

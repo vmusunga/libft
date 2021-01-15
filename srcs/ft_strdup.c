@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:35:33 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/13 17:14:51 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/15 10:47:05 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int i;
-	char *cpy;
-	size_t len;
+	int		i;
+	char	*cpy;
+	size_t	len;
 
 	len = ft_strlen(s1);
 	i = 0;

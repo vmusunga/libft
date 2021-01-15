@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/12 11:28:41 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/15 10:46:45 by vmusunga         ###   ########.fr       */
+/*   Created: 2021/01/15 11:30:40 by vmusunga          #+#    #+#             */
+/*   Updated: 2021/01/15 12:54:07 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_memset(void *b, int c, size_t len)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t i;
+	t_list *buff;
 
-	i = 0;
-	while (i < len)
+	buff = *lst;
+	if (buff == 0)
+		*lst = new;
+	else
 	{
-		((unsigned char*)b)[i] = c;
-		i++;
+		while (buff->next != 0)
+		{
+			buff = buff->next;
+		}
+		buff->next = new;
+		new->next = 0;
 	}
-	return (b);
 }
