@@ -44,7 +44,7 @@ SRCS	=	srcs/ft_atoi.c \
 
 BONUS	=	srcs/ft_lstadd_back.c \
 			srcs/ft_lstadd_front.c \
-			#srcs/ft_lstclear.c \#
+			srcs/ft_lstclear.c \
 			srcs/ft_lstdelone.c \
 			srcs/ft_lstiter.c \
 			srcs/ft_lstlast.c \
