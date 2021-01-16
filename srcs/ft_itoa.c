@@ -27,10 +27,10 @@ static int	ft_intcount(int n)
 
 static char	*ft_revstr(char *str)
 {
-	char buff;
-	int i;
-	int len;
-	int x;
+	char	buff;
+	int		i;
+	int		len;
+	int		x;
 
 	len = 0;
 	i = 0;
@@ -49,10 +49,10 @@ static char	*ft_revstr(char *str)
 
 char		*ft_itoa(int n)
 {
-	int i;
-	unsigned int nb;
-	char *str;
-	int count;
+	int				i;
+	unsigned int	nb;
+	char			*str;
+	int				count;
 
 	nb = n;
 	i = 0;
@@ -61,7 +61,7 @@ char		*ft_itoa(int n)
 		count = 1;
 	if (n < 0)
 		nb = -n;
-	if (!(str = malloc(sizeof(char) * (count + 2))))
+	if (!(str = malloc(sizeof(char) * (count + (n < 0 ? 2 : 1)))))
 		return (NULL);
 	while (i < count)
 	{
@@ -75,15 +75,3 @@ char		*ft_itoa(int n)
 	ft_revstr(str);
 	return (str);
 }
-/*
-int main(int ac, char **av)
-{
-	int x;
-	//x = atoi(av[1]);
-	x = '\0';
-
-	printf("%s", ft_itoa(x));
-	//printf("%s", itoa(x));
-
-	return (0);
-}*/

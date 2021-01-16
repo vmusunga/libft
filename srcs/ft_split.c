@@ -28,7 +28,7 @@ static int	ft_countw(char const *str, char c)
 		while (str[i] != c && str[i])
 			i++;
 	}
-	return(count);
+	return (count);
 }
 
 static int	ft_len(char const *str, char c)
@@ -45,7 +45,7 @@ static int	ft_len(char const *str, char c)
 		i++;
 		x++;
 	}
-	return(x);
+	return (x);
 }
 
 static char	**ft_free(char **tab, int x)
@@ -64,10 +64,10 @@ static char	**ft_free(char **tab, int x)
 
 char		**ft_split(char const *s, char c)
 {
-	char **dest;
-	int i;
-	int x;
-	int y;
+	char	**dest;
+	int		i;
+	int		x;
+	int		y;
 
 	i = 0;
 	x = 0;

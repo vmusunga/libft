@@ -14,9 +14,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *new;
-	size_t i;
-	size_t x;
+	char	*new;
+	size_t	i;
+	size_t	x;
 
 	x = 0;
 	i = 0;
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start >= len)
 		len = 0;
-	if(!(new = malloc(sizeof(char) * len + 1)))
+	if (!(new = malloc(sizeof(char) * len + 1)))
 		return (NULL);
 	while (x < len)
 		new[x++] = s[start++];
