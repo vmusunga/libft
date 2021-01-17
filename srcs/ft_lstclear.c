@@ -12,4 +12,18 @@
 
 #include "../includes/libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	t_list *buff;
+
+	if ((!(*lst)) || (!(*del)))
+		return ;
+	buff = *lst;
+	while (buff->next != 0)
+	{
+		del(buff->content);
+		free(buff);
+		buff = buff->next;
+	}
+	*lst = 0;
+}
