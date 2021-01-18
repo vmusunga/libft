@@ -50,28 +50,30 @@ BONUS	=	ft_lstadd_back.c \
 			ft_lstlast.c \
 			ft_lstmap.c \
 			ft_lstnew.c \
-			ft_lstsize.c \
+			ft_lstsize.c
 
-INCS	= includes
-OBJS	= ${SRCS:.c=.o}
-OBJS_BONUS = ${BONUS:.c=.o}
-NAME	= libft.a
-CC	  = gcc
-LIBC	= ar rc
-LIBR	= ranlib
-CFLAGS  = -Wall -Werror -Wextra
-RM	  = rm -f
+OBJS	=		$(SRCS:.c=.o)
+OBJS_BONUS =	$(BONUS:.c=.o)
+NAME	=		libft.a
+CC		=		gcc
+LIBC	=		ar rc
+CFLAGS	=		-Wall -Werror -Wextra
+RM		=		rm -f
 .c.o:
-		 ${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I${INCS}
-${NAME}:   ${OBJS}
-		 ${LIBC} ${NAME} ${OBJS}
-		 ${LIBR} ${NAME}
-all:	  ${NAME}
-bonus:	${OBJS_BONUS} ${BONUS}
-		 ${LIBC} ${NAME} ${OBJS_BONUS}
-		 ${LIBR} ${NAME}
+			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I
+
+$(NAME):	$(OBJS)
+			$(LIBC) $(NAME) $(OBJS)
+
+all:		$(NAME)
+
+bonus:		$(OBJS_BONUS) $(OBJS)
+			$(LIBC) $(NAME) $(OBJS_BONUS)
+
 clean:
-		 ${RM} ${OBJS}
-fclean:	   clean
-		 ${RM} ${NAME}
-re:		  fclean all
+			$(RM) $(OBJS)
+
+fclean:		clean
+			$(RM) $(NAME)
+
+re:			fclean all

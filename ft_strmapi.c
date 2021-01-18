@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 16:22:57 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/14 13:26:16 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/18 18:09:49 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[len])
 		len++;
-	if (!(new = malloc(sizeof(char) * len + 1)))
+	if (!(new = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	while (i < len)
 	{
