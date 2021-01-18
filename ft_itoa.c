@@ -6,13 +6,13 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:42:20 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/15 10:34:18 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/18 11:39:16 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_intcount(int n)
+static int		ft_intcount(int n)
 {
 	int i;
 
@@ -25,7 +25,7 @@ static int	ft_intcount(int n)
 	return (i);
 }
 
-static char	*ft_revstr(char *str)
+static char		*ft_revstr(char *str)
 {
 	char	buff;
 	int		i;
@@ -34,7 +34,8 @@ static char	*ft_revstr(char *str)
 
 	len = 0;
 	i = 0;
-	while (str[len++])
+	while (str[len])
+		len++;
 	x = len - 1;
 	while (i < x)
 	{
@@ -47,7 +48,7 @@ static char	*ft_revstr(char *str)
 	return (str);
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	int				i;
 	unsigned int	nb;

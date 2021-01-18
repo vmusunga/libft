@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 14:46:26 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/15 11:58:10 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/18 10:34:48 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char		**ft_split(char const *s, char c)
 	i = 0;
 	x = 0;
 	if ((!s))
-		return(NULL);
+		return (NULL);
 	if (!(dest = malloc(sizeof(char**) * (ft_countw(s, c) + 1))))
 		return (NULL);
 	while (x < ft_countw(s, c))
@@ -83,11 +83,7 @@ char		**ft_split(char const *s, char c)
 		while (s[i] == c)
 			i++;
 		while (s[i] != c && s[i])
-		{
-			dest[x][y] = s[i];
-			i++;
-			y++;
-		}
+			dest[x][y++] = s[i++];
 		dest[x][y] = '\0';
 		x++;
 	}
