@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:20:30 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/18 12:03:04 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/18 12:24:56 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <stddef.h>
-# include <stdio.h>
-# include <string.h>
 # include <stdlib.h>
-
-# define NULL ((void*)0)
 
 typedef struct		s_list
 {
