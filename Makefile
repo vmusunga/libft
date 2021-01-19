@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/01/19 11:56:08 by vmusunga          #+#    #+#              #
+#    Updated: 2021/01/19 11:56:18 by vmusunga         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS	=	ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
@@ -68,7 +80,7 @@ $(NAME):	$(OBJS)
 all:		$(NAME)
 
 bonus:		$(OBJS_BONUS) $(OBJS)
-			$(LIBC) $(NAME) $(OBJS_BONUS)
+			$(LIBC) $(NAME) $(OBJS_BONUS) $(OBJS)
 
 clean:
 			$(RM) $(OBJS)
