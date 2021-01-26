@@ -6,7 +6,7 @@
 #    By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/19 11:56:08 by vmusunga          #+#    #+#              #
-#    Updated: 2021/01/19 11:56:18 by vmusunga         ###   ########.fr        #
+#    Updated: 2021/01/22 16:38:47 by vmusunga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,7 @@ LIBC	=		ar rc
 CFLAGS	=		-Wall -Werror -Wextra
 RM		=		rm -f
 .c.o:
-			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I
+			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME):	$(OBJS)
 			$(LIBC) $(NAME) $(OBJS)

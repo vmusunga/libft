@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:38:51 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/18 12:02:00 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/22 14:42:46 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t i;
 	size_t srclen;
 
+	if ((!(dst)) || (!(src)))
+		return (0);
 	srclen = ft_strlen(src);
 	i = 0;
 	if (dst == 0 || size == 0)

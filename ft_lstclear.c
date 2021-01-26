@@ -6,7 +6,7 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 13:24:43 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/18 11:54:30 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/22 14:55:38 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	buff = *lst;
 	while (buff != 0)
 	{
-		del(buff->content);
+		(*del)(buff->content);
 		ciao = buff;
-		free(ciao);
 		buff = buff->next;
+		free(ciao);
 	}
 	*lst = 0;
 }

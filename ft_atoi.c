@@ -6,37 +6,48 @@
 /*   By: vmusunga <vmusunga@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 14:24:00 by vmusunga          #+#    #+#             */
-/*   Updated: 2021/01/15 10:51:32 by vmusunga         ###   ########.fr       */
+/*   Updated: 2021/01/22 14:38:05 by vmusunga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-static int	ft_overflow(unsigned long long x, int sign)
+static int	ft_overflow(unsigned long long x, int sign, int c)
 {
 	unsigned long long min;
 	unsigned long long max;
 
 	min = 9223372036854775808U;
 	max = 9223372036854775807U;
-	if (x > min && sign < 0)
+	if ((x > min || c >= 19) && sign < 0)
 		return (0);
-	if (x > max && sign > 0)
+	if ((x > max || c >= 19) && sign > 0)
 		return (-1);
 	return (2);
+}
+
+static int	is_whitespace(const char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+				|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r'))
+		i++;
+	return (i);
 }
 
 int			ft_atoi(const char *str)
 {
 	int					i;
 	int					sign;
+	int					c;
 	unsigned long long	x;
 
 	sign = 1;
-	i = 0;
-	while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-				|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r'))
-		i++;
+	c = 0;
+	i = is_whitespace(str);
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
@@ -49,8 +60,9 @@ int			ft_atoi(const char *str)
 		x = x * 10;
 		x = x + str[i] - 48;
 		i++;
+		c++;
 	}
-	if (ft_overflow(x, sign) != 2)
-		return (ft_overflow(x, sign));
+	if (ft_overflow(x, sign, c) != 2)
+		return (ft_overflow(x, sign, c));
 	return (x * sign);
 }
